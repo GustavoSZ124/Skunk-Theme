@@ -1,34 +1,54 @@
 body {
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
-	--input-radius: 0px;
-	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
+	/* Accent HSL values */
+	--accent-h: 85;
+	--accent-s: 55%;
+	--accent-l: 45%;
+	/* Window Frame */
+	--titlebar-background: var(--background-secondary-alt);
+	--titlebar-background-focused: var(--background-secondary);
+	/* Inputs */
+	--slider-track-background: var(--color-base-50);
+	/* Editor */
+	--hr-color: var(--color-base-50);
+	--hr-thickness: 3px;
+	/* Spacing */
+	--p-spacing: 0rem;
+	--heading-spacing: 0.2rem;
+	--metadata-padding: var(--size-4-4) 0;
+	/* Lists */
+	--list-indent: 1.5em;
+	/* Backgrounds */
+	--background-primary: var(--color-base-25);
+	--background-primary-alt: var(--color-base-30);
+	--background-secondary: var(--color-base-00);
+	--background-secondary-alt: var(--color-base-10);
+	/* Borders */
+	/* --background-modifier-border: var(--color-base-35); */
 }
 
-.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
-	display: none;
+.theme-dark {
+	color-scheme: dark;
+	/* Editor */
+	/* Headings */
+	--h1-color: var(--color-red);
+	--h2-color: var(--color-yellow);
+	--h3-color: var(--color-cyan);
+	/* Text */
+	--italic-color: var(--color-yellow);
+	--bold-color: var(--color-orange);
+
+	/* Base Colors */
+
+	/* Colors */
+	--color-red: #ff8080;
+	--color-cyan: #81ced8;
 }
 
-svg * {
-	stroke-linecap: square;
-	stroke-linejoin: miter;
-	rx: 0;
-	ry: 0;
+/* Igualar el edit mode con el read mode */
+hr {
+	margin: 0.7rem 0;
 }
 
-.menu {
-	padding: var(--size-2-1);
-}
-
-.menu-item {
-	padding: var(--size-4-1) var(--size-4-2);
-}
-
-.menu-separator {
-	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+.list-bullet {
+	padding-right: 0.55em;
 }
