@@ -8,6 +8,8 @@ body {
 	--titlebar-background-focused: var(--background-secondary);
 	/* Inputs */
 	--slider-track-background: var(--color-base-50);
+	/* Graph */
+	--graph-line: var(--color-base-40, var(--background-modifier-border-focus));
 	/* Editor */
 	--hr-color: var(--color-base-50);
 	--hr-thickness: 3px;
@@ -35,13 +37,24 @@ body {
 	--h3-color: var(--color-cyan);
 	/* Text */
 	--italic-color: var(--color-yellow);
-	--bold-color: var(--color-orange);
+	--bold-color: var(--color-brown);
 
 	/* Base Colors */
-
+	/* --color-base-25: #2f2f2f; */
 	/* Colors */
 	--color-red: #ff8080;
-	--color-cyan: #81ced8;
+	--color-cyan: rgb(129, 206, 216);
+	--color-cyan-rgb: 129, 206, 216;
+	--color-brown: rgb(212, 168, 128);
+	--color-brown-rgb: 212, 168, 128;
+	--color-offlink: hsl(85, 55%, 45%);
+	--color-offlink-rgb: 125, 178, 52;
+}
+
+/* Custom Callouts */
+.callout[data-callout="book"] {
+	--callout-color: var(--color-brown-rgb);
+	--callout-icon: lucide-book;
 }
 
 /* Igualar el edit mode con el read mode */
