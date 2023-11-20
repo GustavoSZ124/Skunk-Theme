@@ -14,8 +14,8 @@ body {
 	--hr-color: var(--color-base-50);
 	--hr-thickness: 3px;
 	/* Spacing */
-	--p-spacing: 0rem;
-	--heading-spacing: 0.2rem;
+	--p-spacing: 0;
+	--heading-spacing: 0;
 	--metadata-padding: var(--size-4-4) 0;
 	/* Lists */
 	--list-indent: 1.5em;
@@ -36,6 +36,7 @@ body {
 	/* Text */
 	--italic-color: var(--color-yellow);
 	--bold-color: var(--color-brown);
+	--text-highlight-bg-rgb: var(--color-offlink-rgb);
 
 	/* Base Colors */
 	/* --color-base-25: #2f2f2f; */
@@ -50,21 +51,70 @@ body {
 }
 
 /* Custom Callouts */
+.callout {
+	margin: 0;
+}
+
 .callout[data-callout="book"] {
 	--callout-color: var(--color-brown-rgb);
 	--callout-icon: lucide-book;
 }
 
 /* Igualar el edit mode con el read mode */
+.metadata-container {
+	margin-block-end: 0;
+}
+
+div.cm-contentContainer div.cm-lineWrapping {
+	white-space: normal;
+	word-break: normal;
+	overflow-wrap: break-word;
+}
+
 hr {
 	margin: 0.7rem 0;
 }
 
-.list-bullet {
-	padding-right: 0.55em;
+/* Headers */
+h1,
+.markdown-rendered h1,
+h2,
+.markdown-rendered h2,
+h3,
+.markdown-rendered h3 {
+	padding-top: 0.12rem;
+	display: inline-block;
 }
 
+.cm-s-obsidian .cm-line.HyperMD-header {
+	padding-top: 0;
+}
+
+.list-bullet {
+	padding-right: 0.6em;
+}
+
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+	padding-right: 0.35rem;
+}
+
+/* Canvas */
+.markdown-source-view.mod-inside-iframe>.cm-editor>.cm-scroller,
+.canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view {
+	padding: 0 var(--size-4-5);
+}
+
+.canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view::before,
+.canvas-node-content.markdown-embed>.markdown-embed-content>.markdown-preview-view::after {
+	min-height: min(calc(var(--canvas-node-height) * 0.1 - 3px), var(--size-4-4));
+}
+
+/* Plugins */
 /* Metadata Menu */
+.metadata-menu.modal-container.note-fields-modal .modal {
+	max-width: calc(var(--dialog-width)*1.4);
+}
+
 .view-content.fileclass-view-content {
 	overflow: hidden;
 }
